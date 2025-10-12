@@ -20,8 +20,5 @@
     "url": "https://github.com/vinisha-15/PingMe/issues"
   },
   "homepage": "https://github.com/vinisha-15/PingMe#readme",
-  "description": "",
-  "dependencies": {
-    "resend": "^6.0.2"
-  }
+  "description": ""
 }
