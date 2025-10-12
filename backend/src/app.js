@@ -3,14 +3,17 @@ import dotenv from "dotenv";
 import authRoute from "./routes/auth.route.js";
 import messageRoute from "./routes/message.route.js";
 import path from "path";
+import {connectDB} from "./lib/db.js";
 
 const app=express();
 dotenv.config();
+app.use(express.json());
 const __dirname=path.resolve();
 
 const PORT=process.env.PORT|| 5000;
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT} `);
+    connectDB();
 })
 app.use("/api/auth",authRoute);
 app.use("/api/messages",messageRoute);
