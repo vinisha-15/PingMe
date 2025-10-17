@@ -7,7 +7,7 @@ import {arcjetProtection} from "../middleware/arcjet.middleware.js";
 //the middleware execute in order-so requests get rate-limited first,then authenticated.
 //this is actually more efficient since unauthenticated requests get blocked by rate limiting  before hitting the auth middleware.
 
-app.use(arcjetProtection,protectRoute);
+router.use(arcjetProtection,protectRoute);
 
 router.get('/contacts',getAllContacts);
 router.get('/chats',getChatPartners);
