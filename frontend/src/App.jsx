@@ -6,9 +6,6 @@ import SignUpPage from "./pages/SignUpPage";
 import { useAuthStore } from "./store/useAuthStore";
 function App(){
     const {authUser,isLoading,login}=useAuthStore();
-    console.log("authUser",authUser);
-    console.log("isLoading",isLoading);
-    console.log("login",login);
   return (
     <div className="min-h-screen bg-slate-900 relative flex items-center justify-center p-4 overflow-hidden">
       {/* DECORATORS - GRID BG & GLOW SHAPES */}
