@@ -5,6 +5,7 @@ import path from "path";
 import {connectDB} from "./lib/db.js";
 import {ENV} from "./lib/env.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 const app=express();
 const __dirname=path.resolve();
@@ -18,6 +19,7 @@ app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT} `);
     connectDB();
 })
+app.use(cors({origin:ENV.CLIENT_URL,credentials:true}));
 app.use("/api/auth",authRoute);
 app.use("/api/messages",messageRoute);
 
