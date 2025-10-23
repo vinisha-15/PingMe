@@ -1,5 +1,5 @@
-import axois from "axois"
-export const axiosInstance=axois.create({
-    baseURL:import.meta.env.NODE_ENV==="development"?"http://localhost:5000/api":"/api",
+import axios from "axios"   
+export const axiosInstance=axios.create({
+    baseURL:import.meta.env.MODE==="development"?"http://localhost:3000/api":"/api",
     withCredentials:true
 })
